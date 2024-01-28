@@ -123,10 +123,6 @@ public class TestPoints {
 			if(tempType == 1) { // it will be a Point
 				tempPoint = new Point(tempX, tempY);
 			} else {
-				// TODO: When we assign a ColorPoint value to the tempPoint
-				// (in theory, this is what is happening), the ColorPoint gets
-				// "demoted" to a more generic type since our ArrayList is only
-				// populated with regular points. Why?
 				tempPoint = new ColorPoint(tempX, tempY, color);
 			}
 			points.add(tempPoint);
@@ -146,16 +142,17 @@ public class TestPoints {
 			System.out.println("\n\nX coordinate: " + p.getX());
 			System.out.println("Y coordinate: " + p.getY());
 			System.out.println("Distance from 0: " + p.distanceFromZero());
-			if(p instanceof Point) {
-				pointCount++;
-			} else if(p instanceof ColorPoint) {
+			if(p instanceof ColorPoint) {
 				ColorPoint cp = (ColorPoint) p;
 				System.out.println("Color: " + cp.getColor());
 				colorPointCount++;
+			} 
+			else {
+				pointCount++;
 			}
 		}
 		System.out.println("\nNumber of regular points: " + pointCount);
-		System.out.println("\nNumber of color points: " + colorPointCount);
+		System.out.println("Number of color points: " + colorPointCount + "\n");
 		
 	}
 
