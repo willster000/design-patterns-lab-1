@@ -5,14 +5,6 @@ public class ColorPoint extends Point {
 	// Fix the getColor method and the TestPoint class constructor accordingly.
 	// Explain (in comments here or in a separate file) why enums are 
 	// a better choice than strings to represent colors
-
-	/*
-	 * A: Enums provide a standardized way for users of the code to interface with
-	 * it via a list of "options" or available values, rather than having to perform
-	 * exhaustive format-checking by hand in the class's constructor or elsewhere.
-	 * They also help to document such behavior, as using a String and restricting
-	 * the field to an arbitrary list of allowed inputs is much harder to figure out.
-	 */
 	
 	public static enum Color {
 		RED, 
