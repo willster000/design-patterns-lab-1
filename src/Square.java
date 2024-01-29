@@ -1,5 +1,5 @@
 
-public class Square /*extends Rectangle*/ {
+public class Square /*extends Rectangle*/ extends TwoSidedShape {
 	protected int side;
 	// side1, side2
 	
@@ -10,6 +10,14 @@ public class Square /*extends Rectangle*/ {
 	
 	public void setSide(int side) {
 		this.side = side;
+	}
+
+	public int getSideOne() {
+		return side;
+	}
+
+	public int getSideTwo() {
+		return side;
 	}
 
 	// @Override
@@ -24,13 +32,13 @@ public class Square /*extends Rectangle*/ {
 	// 	// this.side1 = side2;
 	// }
 	
-	public int area() {
-		return side * side;
-	}
+	// public int area() {
+	// 	return side * side;
+	// }
 	
-	public int perimeter() {
-		return 4 * side;
-	}
+	// public int perimeter() {
+	// 	return 4 * side;
+	// }
 
 	// Two sides of a square are always equal:
 	public boolean sidesEqual() {

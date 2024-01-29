@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class TestRectangleSquare {
 
@@ -6,7 +7,7 @@ public class TestRectangleSquare {
 		// (Barbara Liskov, MIT computer scientist):
 		// If a property of objects of type T holds in all possible tests
 		// and S is a subtype of T then the same property must also hold 
-		// for all objects of type S	
+		// for all objects of type S
 		
 		System.out.println("Rectangle:");
 		
@@ -49,7 +50,20 @@ public class TestRectangleSquare {
 		System.out.println("Are two sides equal? " + s1.sidesEqual());	
 		
 		// Lab task 2: see questions on Canvas. 
-		
-	}
+		ArrayList<Shape> shapes = new ArrayList<Shape>();
 
+		// populate list with random shapes
+		shapes.add(new Circle(5));
+		shapes.add(new Rectangle(2, 3));
+		shapes.add(new Square(6));
+		shapes.add(new Circle(8));
+		shapes.add(new Circle(3));
+		shapes.add(new Rectangle(2,6));
+		shapes.add(new Square(8));
+
+		for (Shape s : shapes) {
+			System.out.println("Area: " + s.area());
+			System.out.println("Perimeter: " + s.perimeter() + "\n");
+		}
+	}
 }

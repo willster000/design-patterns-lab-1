@@ -61,3 +61,14 @@ In the case where Rectangle extends Square, the issue is not in the `setSide()` 
 
 ---
 
+Q2: Square and Rectangle classes do have a lot in common, so it makes sense for them to be included into the same class hierarchy.
+
+- [X] Design an interface Shape that includes methods that the two classes have in common and make both of these classes implement this interface.
+- [X] Then write a class Circle that also implements the Shape interface. 
+- [X] In main create an array or array list of shapes that includes some squares, some rectangles, and some circles, and then call the methods area and perimeter on all of them in a loop, printing the results. 
+
+---
+
+Q3: Square and Rectangle have more in common with each other than with a Circle: they both are two-sided shapes. Their area and perimeter are computed in the same way, as long as we know their sides. 
+
+Design and implement an abstract class TwoSidedShape that has methods for computing area and perimeter by using abstract methods getSide1 and getSide2. Then rewrite the Square and Rectangle classes so that they extend TwoSidedShape and have only the methods for setting the sides and the new methods getSide1 and getSide2, but not area and perimeter. The abstract class must implement the Shape interface (Square and Rectangle will no longer directly implement it, only by extending TwoSidedShape). Your testing code with a collection of shapes must still work without changes. 
