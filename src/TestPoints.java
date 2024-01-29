@@ -41,14 +41,6 @@ public class TestPoints {
 		/****Lab Task 1: answer the following questions ********/
 		// Q1: Which of the following is a valid statement? Why?
 		Point p3 = new ColorPoint(3, 3, ColorPoint.Color.BLUE);
-		/*
-		 * A: This is an example of polymorphism in Java, specifically the "is-a" 
-		 * relationship between child objects of a parent class (in this case,
-		 * a ColorPoint "is a" type of Point), which allows the construction of
-		 * any descendant of type Point to be assigned to the Point object.
-		 * 
-		 */
-
 		// ColorPoint cp3 = new Point(3,3);
 		
 		// Q2: Uncomment a valid statement above. How can you call 
@@ -59,15 +51,6 @@ public class TestPoints {
 		// Clearly explain what is required from the type safety standpoint
 		// to call this method. 
 		// Hint: use typecasting. 
-		/*
-		 * A: p3 could be assigned another type such as Point, in which case 
-		 * our call to getColor() would result in an error, since the Point
-		 * class lacks a getColor() method. We can't guarantee that p3 is
-		 * any specific subclass of Point at compile time. To avoid this,
-		 * we want to confirm that we are dealing with type ColorPoint before
-		 * calling getColor().
-		 */
-
 		
 		// Q3: see ColorPoint class. 
 		
